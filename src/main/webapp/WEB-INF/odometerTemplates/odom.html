@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<!DOCTYPE html>
+            <html>
+              <head>
+                <meta content="text/html; charset=UTF-8" http-equiv="Content-Type"/>
+              </head>
+              <body>
+                
+                <div>
+					
+					<form method="post" action="odom">
+				        <h1>Odometer</h1>
+				        <p><span th:text="${reading}">This is gonna get replaced</span></p>
+				        <input type="hidden" id="buttonIdInput" name="buttonId" value="">
+				        <button id="Lower" type="button" onclick="sendButtonId('Lower')">Lower</button>
+				        <button id="Higher" type="button" onclick="sendButtonId('Higher')">Higher</button>
+				        
+				    </form>
+				</div>
+				<script>
+						function sendButtonId(buttonId) {
+					        document.getElementById("buttonIdInput").value = buttonId;
+					        var form = document.querySelector("form");
+					        form.submit();
+					    }
+				</script>
+                
+              </body>
+            </html>
+
+</body>
+</html>

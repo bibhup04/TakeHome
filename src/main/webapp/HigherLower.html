@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div action="HigherLowerServlet" method="post">
+		<lable id="prevNo">
+			${previousNo}
+		</lable>
+	</div>
+	<div id = "secondNo">
+		<button id = "Higher" onclick="randonGuess(this.id);">Higher</button>
+		<button id = "Lower" onclick="randonGuess(this.id);">Lower</button>
+	</div>
+	
+	<script>
+		function randonGuess(buttonId){
+			var pervNo = document.getElementById("prevNo").innerText;
+			var nextNo = Math.floor(Math.random() * (1000)) + 1;
+			console.log("Button clicked ", buttonId, " and prev no ", pervNo, "Next no-", nextNo);
+		}
+	</script>
+</body>
+</html>
